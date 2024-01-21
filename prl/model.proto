@@ -23,4 +23,5 @@ message PbModel {
   properties.PbPropertyStore propertyStore = 4;
   repeated rules.PbRule rule = 5;
   repeated features.PbFullFeature feature = 6;
+  features.PbIntStore intStore = 7;
 }
