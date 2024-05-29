@@ -3,15 +3,12 @@
 
 syntax = "proto3";
 package boolerules.rules;
-import "model_modules.proto";
 import "model_properties.proto";
 import "model_constraints.proto";
-import "model_primitives.proto";
 option java_package = "com.booleworks.prl.model.protobuf";
 option java_outer_classname = "ProtoBufRules";
 
 message PbRule {
-  modules.PbModule module = 1;
   optional string id = 2;
   optional string description = 3;
   repeated boolerules.properties.PbProperty properties = 4;
@@ -27,5 +24,4 @@ message PbRule {
   optional int32 intValueOrVersion = 14;
   optional bool isAmo = 15; // group rule
   repeated int32 groupFeatures = 16; // group rule
-  optional primitives.PbVisibility visibility = 17;
 }

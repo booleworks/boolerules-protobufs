@@ -36,9 +36,3 @@ enum PbComparisonOperator {
   GT = 4;
   GE = 5;
 }
-
-enum PbVisibility {
-  PRIVATE = 0;
-  INTERNAL = 1;
-  PUBLIC = 2;
-}

@@ -3,7 +3,6 @@
 
 syntax = "proto3";
 package boolerules.model;
-import "model_modules.proto";
 import "model_featurestore.proto";
 import "model_properties.proto";
 import "model_rules.proto";
@@ -18,7 +17,6 @@ message PbHeader {
 
 message PbModel {
   PbHeader header = 1;
-  modules.PbModuleHierarchy moduleHierarchy = 2;
   features.PbFeatureStore featureStore = 3;
   properties.PbPropertyStore propertyStore = 4;
   repeated rules.PbRule rule = 5;
