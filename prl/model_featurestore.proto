@@ -8,6 +8,13 @@ import "model_primitives.proto";
 option java_package = "com.booleworks.prl.model.protobuf";
 option java_outer_classname = "ProtoBufFeatureStore";
 
+enum PbTheory {
+  BOOL = 0;
+  VERSIONED_BOOL = 1;
+  ENUM = 2;
+  INT = 3;
+}
+
 message PbFeature {
   int32 id = 1;
 }
@@ -15,9 +22,7 @@ message PbFeature {
 message PbFullFeature {
   int32 id = 1;
   string featureCode = 2;
-  optional bool versioned = 4;
-  repeated string enumValues = 5;
-  optional boolerules.primitives.PbIntRange intRange = 6;
+  PbTheory theory = 3;
 }
 
 message PbAllFeatures {
