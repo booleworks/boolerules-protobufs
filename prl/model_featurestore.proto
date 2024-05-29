@@ -50,13 +50,3 @@ message PbFeatureStore {
   repeated PbFeature group = 4;
   repeated string nonUniqueFeatures = 5;
 }
-
-message PbIntStore {
-  map<int32, PbIntegerUsage> usedValues = 1;
-}
-
-message PbIntegerUsage {
-  bool usedInArEx = 1;
-  repeated primitives.PbIntRange values = 2;
-  repeated int32 otherFeatures = 3;
-}
